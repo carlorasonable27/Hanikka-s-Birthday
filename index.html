@@ -33,13 +33,298 @@ dialog{border:3px solid var(--ink);background:#fff5e9;color:var(--ink);max-width
 
 .flight-time{margin:10px 0 0;text-align:center;font:7px/1.8 Pixel,monospace;color:#93677b}
 
-.birthday-ready{display:inline-block;color:#92546d;border-bottom:2px dashed #d89aaf;padding:9px 0;font-size:18px}.no-dare{font-size:18px;line-height:1.6;color:#a14e71;margin:15px auto 0}.no-dare span{font-size:15px;color:#906f79}.garden-companion{display:flex;align-items:center;justify-content:center;gap:30px;max-width:730px;margin:12px auto 20px;padding:15px 23px;border:2px dashed #bc8d9d;background:#fff5e8}.garden-companion>div:last-child{max-width:380px}.garden-companion h3{font-size:12px;line-height:1.8}.garden-companion p{font-size:17px}.garden-companion .eyebrow{font-size:7px}.garden-companion .companion-art{flex-shrink:0}.flower-btn.blooming canvas,.peony-bloom{animation:peony-open .7s steps(5) both}.flower-btn:not(.collected):hover canvas{animation:bob 1.5s ease-in-out infinite}.peony-reveal{display:flex;align-items:flex-end;justify-content:center;gap:20px}.peony-auto-note{font-size:14px;color:#66805d;margin:18px auto 22px}.reason-copy{overflow-wrap:anywhere}.flight-mission{background:#fff6e8;border:3px solid var(--ink);border-bottom:0;padding:10px 12px}.flight-mission>div{display:flex;gap:9px;align-items:baseline;font-size:14px;line-height:1.55}.flight-mission strong{font:7px/2 Pixel,monospace;white-space:nowrap;min-width:76px;color:#62815c}.flight-mission>div:last-child strong{color:#a34e72}.flight-pickup{position:absolute;top:16px;left:9px;right:9px;padding:13px 9px;background:#fff4d9;border:2px solid #e7bd74;box-shadow:3px 3px #11182766;color:#704351;font:9px/1.9 Pixel,monospace;text-align:center;line-height:1.9;z-index:2;pointer-events:none;animation:acquired-pop .25s steps(4) both}.flight-overlay{z-index:3}.pixel-guide{position:fixed;z-index:65;pointer-events:none;display:flex;flex-direction:column;align-items:center;gap:5px;transition:left .28s ease,top .28s ease;filter:drop-shadow(2px 3px 0 #643e5022)}.guide-copy{display:block;background:#fff8ed;border:2px solid #a45e7b;box-shadow:2px 2px #ebafc3;padding:8px 10px;color:#82475e;font:7px/1.9 Pixel,monospace;text-align:center;max-width:100%;overflow-wrap:anywhere}.guide-hand{width:25px;height:29px;align-self:flex-start;margin-left:var(--hand-x,80px);transform:rotate(180deg);animation:guide-nudge 1.6s ease-in-out infinite}.pixel-guide.below{flex-direction:column-reverse}.pixel-guide.below .guide-hand{transform:none;animation:guide-nudge-up 1.6s ease-in-out infinite}.guide-target{outline-offset:5px}.pixel-guide.scroll-guide{left:auto!important;right:14px;width:190px!important}.pixel-guide.scroll-guide .guide-copy{font-size:6px}.pixel-guide.scroll-guide .guide-hand{align-self:flex-end;margin-left:0;margin-right:12px}@keyframes guide-nudge{0%,100%{transform:rotate(180deg) translateY(0)}50%{transform:rotate(180deg) translateY(-5px)}}@keyframes guide-nudge-up{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}@keyframes peony-open{0%{transform:scale(.3);opacity:.3}65%{transform:scale(1.12);opacity:1}100%{transform:scale(1);opacity:1}}@keyframes acquired-pop{from{opacity:0;transform:translateY(-8px) scale(.95)}to{opacity:1;transform:translateY(0) scale(1)}}
-@media(max-width:560px){.garden-companion{gap:10px;padding:13px 10px;align-items:center}.garden-companion .companion-art canvas{width:112px!important;height:112px!important}.garden-companion h3{font-size:9px}.garden-companion p{font-size:15px;margin-bottom:12px}.garden-companion .eyebrow{font-size:6px}.garden-companion .btn{font-size:7px;padding:10px 8px}.guide-copy{font-size:6px;padding:7px 9px}.no-dare{font-size:16px}.no-dare span{font-size:14px}.flight-mission{padding:8px}.flight-mission>div{font-size:12px;gap:5px}.flight-mission strong{font-size:6px;min-width:66px}.flight-pickup{font-size:8px;padding:12px 8px}.peony-reveal{gap:10px}}
-@media(prefers-reduced-motion:reduce){.pixel-guide{transition:none}.guide-hand,.flower-btn.blooming canvas,.peony-bloom,.flight-pickup{animation:none!important}}
+.birthday-ready{display:inline-block;color:#92546d;border-bottom:2px dashed #d89aaf;padding:9px 0;font-size:18px}
+.no-dare{font-size:18px;line-height:1.6;color:#a14e71;margin:15px auto 0}
+.no-dare span{font-size:15px;color:#906f79}
+.garden-companion{display:flex;align-items:center;justify-content:center;gap:30px;max-width:730px;margin:12px auto 20px;padding:15px 23px;border:2px dashed #bc8d9d;background:#fff5e8}
+.garden-companion>div:last-child{max-width:380px}
+.garden-companion h3{font-size:12px;line-height:1.8}
+.garden-companion p{font-size:17px}
+.garden-companion .eyebrow{font-size:7px}
+.garden-companion .companion-art{flex-shrink:0}
+.flower-btn.blooming canvas,.peony-bloom{animation:peony-open .7s steps(5) both}
+.flower-btn:not(.collected):hover canvas{animation:bob 1.5s ease-in-out infinite}
+.peony-reveal{display:flex;align-items:flex-end;justify-content:center;gap:20px}
+.peony-auto-note{font-size:14px;color:#66805d;margin:18px auto 22px}
+.reason-copy{overflow-wrap:anywhere}
+.flight-mission{background:#fff6e8;border:3px solid var(--ink);border-bottom:0;padding:10px 12px}
+.flight-mission>div{display:flex;gap:9px;align-items:baseline;font-size:14px;line-height:1.55}
+.flight-mission strong{font:7px/2 Pixel,monospace;white-space:nowrap;min-width:76px;color:#62815c}
+.flight-mission>div:last-child strong{color:#a34e72}
+.flight-pickup{position:absolute;top:16px;left:9px;right:9px;padding:13px 9px;background:#fff4d9;border:2px solid #e7bd74;box-shadow:3px 3px #11182766;color:#704351;font:9px/1.9 Pixel,monospace;text-align:center;line-height:1.9;z-index:2;pointer-events:none;animation:acquired-pop .25s steps(4) both}
+.flight-overlay{z-index:3}
+@keyframes peony-open{0%{transform:scale(.3);opacity:.3}65%{transform:scale(1.12);opacity:1}100%{transform:scale(1);opacity:1}}
+@keyframes acquired-pop{from{opacity:0;transform:translateY(-8px) scale(.95)}to{opacity:1;transform:translateY(0) scale(1)}}
+@media(max-width:560px){.garden-companion{gap:10px;padding:13px 10px;align-items:center}
+.garden-companion .companion-art canvas{width:112px!important;height:112px!important}
+.garden-companion h3{font-size:9px}
+.garden-companion p{font-size:15px;margin-bottom:12px}
+.garden-companion .eyebrow{font-size:6px}
+.garden-companion .btn{font-size:7px;padding:10px 8px}
+.no-dare{font-size:16px}
+.no-dare span{font-size:14px}
+.flight-mission{padding:8px}
+.flight-mission>div{font-size:12px;gap:5px}
+.flight-mission strong{font-size:6px;min-width:66px}
+.flight-pickup{font-size:8px;padding:12px 8px}
+.peony-reveal{gap:10px}
+}
 
-/* Reserve a small landing spot for the guide below dialog actions. */
-dialog{padding-bottom:100px}
-.pixel-guide.game-guide:not(.scroll-guide) .guide-copy{display:none}
+:root{--ink:#63394f;--rose:#a53966;--pink:#f0a4bf;--light:#ffe0eb;--cream:#fff6e9;--paper:#fffaf1;--green:#658367;--line:#c9819d;--shadow:#e4acc1}
+body{background-color:#fcecf0;background-image:linear-gradient(#e7bec733 1px,transparent 1px),linear-gradient(90deg,#e7bec733 1px,transparent 1px);background-size:24px 24px;transition:background-color .6s ease}
+body[data-scene="letter"]{background-color:#f4e7e4}
+body[data-scene="ending"]{background-color:#e7d5e8}
+.topbar{padding-bottom:18px}
+.brand{color:#86405f}
+.brand .logo{filter:drop-shadow(2px 2px #e8aec0);animation:heart-beat 3.5s ease-in-out infinite}
+.controls .control{border:2px solid #b67d95;background:#fff9ee;box-shadow:2px 3px #e1b2c3;transition:background .2s,transform .2s}
+.controls .control[aria-pressed=true]{background:#f8d9e5;color:#833858}
+.music-led.playing{animation:music-beat .9s ease-in-out infinite}
+.stage-trail{border-color:#a6617f;background:#fff9ed;box-shadow:4px 4px #e6b3c7;padding-top:11px}
+.trail-node{background:transparent;transition:background .25s,transform .25s}
+.trail-node.available:not(.complete){background:#fbe1e9;box-shadow:inset 0 -3px #eaa2bd}
+.trail-node.current{outline:1px dashed #c77d9a;outline-offset:2px}
+.trail-node.complete .trail-state{border-color:#8da181;background:#e0ead0}
+.trail-caption{margin-top:5px;color:#a4426d;letter-spacing:.5px}
+.trail-node.locked{opacity:.72}
+.trail-node:focus-visible{outline:3px solid #769371}
+.adventure{border-color:#9b5f7b;background:#fff0f3;box-shadow:7px 7px #e7b2c6,10px 10px #f8dce6}
+.adventure:before{inset:9px;border-color:#dda8bd}
+.scene{animation:chapter-arrive .42s cubic-bezier(.2,.7,.3,1) both}
+.scene-top{gap:14px}
+.chapter{border:1px solid #d69eb5;background:#fff9eee8;padding:7px 10px;box-shadow:2px 2px #ecc7d3;letter-spacing:.35px}
+.tiny-heart{filter:drop-shadow(1px 2px #f1c4d3)}
+.tiny-heart.found{color:#829571;opacity:.8}
+.btn{border-color:#91516e;box-shadow:0 4px #91516e,inset 0 2px #ffe3ec;background:#efa5c0;transition:background .18s,transform .18s,box-shadow .18s}
+.btn:hover{background:#f8bbd2;box-shadow:0 6px #91516e,inset 0 2px #ffedf3}
+.btn.secondary{background:#fffaf0;box-shadow:0 4px #b58b96,inset 0 2px white;border-color:#ad7e91}
+.btn.green{background:#d8e2c2;border-color:#7a9471;box-shadow:0 4px #7a9471,inset 0 2px #edf3df}
+.btn.green:hover{background:#e4edce}
+.btn[aria-disabled=true]{box-shadow:0 3px #b7a0a5;filter:saturate(.3)}
+.btn[aria-disabled=true]:hover{transform:none}
+.btn:active{box-shadow:0 1px #91516e!important}
+.text-btn:hover{color:#ad416d;text-decoration-thickness:2px}
+.key{transition:background .15s,box-shadow .15s}
+.key:active{background:#f9c8d9}
+.scene-trimmings{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.pixel-mote{position:absolute;width:4px;height:4px;background:#e8a5be;box-shadow:0 4px #e8a5be,0 -4px #e8a5be,4px 0 #e8a5be,-4px 0 #e8a5be;opacity:.25;animation:mote-drift 9s ease-in-out infinite}
+.scene-trimmings .butterfly{position:absolute;opacity:.7;animation:butterfly-path 13s ease-in-out infinite}
+.scene-trimmings .butterfly:nth-last-child(1){animation-delay:-6s;animation-duration:17s}
+.scene-trimmings .butterfly canvas{animation:wing-flutter .9s steps(2) infinite}
+.safe{background:#ba6c91;border-color:#8f4f70;box-shadow:9px 10px #b46f8566,inset 5px 5px #f7b3cf}
+.safe-door{background:#f3b5cf;border-color:#975573;box-shadow:inset 4px 4px #ffe7ef,inset -4px -4px #df8eb0}
+.safe-door:after{content:'✧';position:absolute;right:12px;top:8px;color:#fff2d5;font-size:19px;animation:twinkle 3s ease-in-out infinite}
+.safe.unlocked{background:#8f527b}
+.safe-girl{animation:character-idle 4s ease-in-out infinite}
+.stamp{background:#fff8ed;border-color:#b46a88;box-shadow:3px 3px #efc6d2}
+.birthday-ready{color:#984b70}
+.safe-intro h1{color:#963b68;text-shadow:2px 3px #f6cddd}
+.safe-scene .scene-bg{opacity:.3}
+.safe-scene .scene-bg:after{background:#fff0f355}
+.promise-box>canvas{filter:drop-shadow(3px 5px #e6b4c54d)}
+.no-dare{border:1px dashed #d390ad;background:#fff5eee6;padding:10px 13px;max-width:500px}
+.choice-buttons{margin-top:15px}
+.choice-caption{color:#9b607c}
+.hero-photo{outline-color:#ae6d8a;box-shadow:6px 6px #e2abc2;animation:photo-settle .8s ease both}
+.cake-base{background:#f3b1ca;box-shadow:inset -8px -5px #d977a3}
+.cake-plate{background:#a86485;box-shadow:0 5px #edc4d2}
+.wish{color:#a14d73}
+.candle.out:before{content:'';position:absolute;width:4px;height:8px;background:#e2c2ce;left:50%;top:7px;animation:candle-smoke .9s ease-out forwards}
+.cake-sparkles{position:absolute;inset:0;pointer-events:none}
+.cake-sparkles i{position:absolute;font-style:normal;color:#dcaa64;font-size:17px;animation:twinkle 2.5s ease-in-out infinite}
+.map-note{background:#fffaf1;border:2px solid #c89aaf;box-shadow:3px 3px #ebc6d3}
+.map-stop span{background:#fff9ed;border-color:#b47392;box-shadow:3px 3px #e1aec2}
+.map-stop:hover span{background:#f9d7e4}
+.map-locked span{background:#e7dee0;border-color:#b9a6b1}
+.map-stop:not(.map-locked) canvas{filter:drop-shadow(2px 4px #c992aa33)}
+.garden-scene{background-color:#fff0f2;background-image:linear-gradient(0deg,#dbe3c533,transparent 65%)}
+.garden-progress{border:2px solid #b18d9e;background:#fff8eb;padding:9px 12px;box-shadow:3px 3px #ebc1ce}
+.garden-companion{border:2px solid #c68aa6;background:#fff8ed;box-shadow:5px 5px #edc7d5;position:relative}
+.garden-companion:before,.garden-companion:after{content:'♡';position:absolute;color:#d987a8;font-size:22px;animation:companion-heart 3.4s ease-in-out infinite;pointer-events:none}
+.garden-companion:before{left:8%;top:16%}
+.garden-companion:after{left:22%;top:31%;font-size:14px;animation-delay:-1.6s}
+.companion-art{filter:drop-shadow(3px 4px #d9a1b83b)}
+.flower-grid{background:#dbe4c4;border-color:#91a682;box-shadow:inset 0 -12px #bbcca8,5px 5px #e4c5cb;background-image:linear-gradient(90deg,transparent 49%,#ffffff14 50%,transparent 51%);background-size:35px 35px}
+.flower-btn.collected span{background:#fae1e9;border-color:#c78ca8;color:#a1426c}
+.flower-btn.collected:after{background:#f8f7df;border-color:#87a77c;color:#5d7d58}
+.ribbon-finish{border-color:#c891aa}
+.ribbon-finish p{color:#96617b}
+.peony-reveal{padding:4px 0 8px}
+.peony-auto-note{background:#eef0dc;display:table;padding:7px 12px;border:1px dashed #a7b596}
+.peony-reveal canvas:last-child{filter:drop-shadow(2px 3px #e4b8cb44)}
+.cafe-scene{background-color:#fff3e9;background-image:linear-gradient(0deg,#f8dce444 25%,transparent 25%);background-size:100% 42px}
+.cafe-awn{height:28px;background:repeating-linear-gradient(90deg,#df82a6 0 42px,#fff3db 42px 84px);border-bottom:4px solid #b65f85;box-shadow:0 6px #f3c7d6}
+.cafe-scene .scene-top{margin-top:9px}
+.tab{border-color:#c58ba4;background:#fffaf0;box-shadow:0 2px #e6bdcb;transition:background .2s,transform .2s}
+.tab[aria-selected=true]{background:#edacc5;border-color:#a56483;box-shadow:0 3px #a56483}
+.food-item{position:relative;background:#fffaf1;border-color:#d49db3;box-shadow:4px 5px #e9becc;transition:transform .22s,box-shadow .22s;animation:card-arrive .4s ease both}
+.food-item:nth-child(2n){animation-delay:.04s}
+.food-item:nth-child(3n){animation-delay:.08s}
+.food-item:after{content:'♥';display:block;margin:9px auto -4px;color:#d58aa8;font-size:11px;border-top:1px dashed #e4b4c6;padding-top:6px}
+.food-item:hover{transform:translateY(-5px) rotate(-1deg);box-shadow:5px 8px #e6b6c8}
+.food-item:hover canvas{animation:food-wiggle .6s ease-in-out}
+.food-item h3{color:#a44f73}
+.steam{color:#b68b87;left:43%;font-size:29px}
+.matcha-station{border-bottom:3px solid #ddbdaf;padding-bottom:17px}
+.matcha-station canvas{filter:drop-shadow(3px 4px #d6beae66)}
+.matcha-station[data-phase="1"] canvas,.matcha-station[data-phase="2"] canvas{animation:cup-pour .7s ease}
+.matcha-station[data-phase="3"] canvas{animation:cup-stir .45s ease-in-out 2}
+.matcha-station[data-phase="4"] canvas{animation:serve-cup .6s ease}
+.step-dots{background:#eef0db;padding:10px;border:1px solid #b1be9f}
+.ticket{border-color:#c48b80;background:#fff9e8;box-shadow:5px 5px #ebc9bd}
+.album-scene{background:#f4e9ef;background-image:repeating-linear-gradient(90deg,transparent 0 39px,#e7cfdc55 39px 40px)}
+.scrapbook{position:relative;background:#fff9ee;border:2px solid #b37f9b;border-left:11px solid #c995b0;box-shadow:6px 7px #dcb4c9;padding-top:40px}
+.scrapbook:before{content:'';position:absolute;left:10px;top:15px;bottom:15px;width:3px;background:repeating-linear-gradient(#d0a2b6 0 5px,transparent 5px 15px)}
+.scrapbook-photo{position:relative;border-color:#c7a1b4;background:#fffdf6;box-shadow:4px 5px #dfc3cc;animation:photo-settle .45s ease both}
+.scrapbook-photo:before{content:'';position:absolute;top:-13px;left:calc(50% - 42px);width:84px;height:27px;background:#edb3c5bd;transform:rotate(-4deg);border-left:3px dotted #fff5e88c;border-right:3px dotted #fff5e88c;z-index:1}
+.scrapbook-photo img{background:#f7ede6}
+.scrapbook-photo span{font-size:19px;color:#8b4968;line-height:1.65}
+.photo-index-tag{display:table;margin:0 auto 26px;padding:6px 11px;font:7px/1.8 Pixel,monospace;background:#f8dce6;color:#985476;border:1px dashed #c48ba5}
+.memory-page{background:#fffaf099;position:relative}
+.memory-page h2{color:#a04e78}
+.album-pagination .pixel{color:#a0557c}
+.body-turn-left .scrapbook-photo{animation:page-back .4s ease both}
+.body-turn-right .scrapbook-photo{animation:page-forward .4s ease both}
+.letter-lobby{border:2px dashed #cf9cb2;background:#fff7ef;padding:28px 24px;box-shadow:5px 5px #edcad6}
+.letter-lobby>.envelope-button{filter:drop-shadow(3px 5px #c78ca147)}
+.letter-lobby>.envelope-button:hover canvas{animation:envelope-wobble .6s ease-in-out}
+.letter-scene{background:#f2e4df}
+.letter-sheet{border-color:#d3b2a9;border-top:8px solid #ca789d;background-color:#fffcf4;background-image:radial-gradient(#caa9a012 .7px,transparent .7px);background-size:5px 5px;box-shadow:7px 8px #dcb9bd;padding-top:50px}
+.letter-sheet:before{content:'♡';display:block;position:absolute;right:24px;top:13px;color:#d79bb3;font-size:25px}
+.letter-sheet .letter-salutation{color:#a44772}
+.letter-sheet p{color:#704855;overflow-wrap:anywhere}
+.letter-sheet .signature{color:#a04d75}
+.letter-sheet .eyebrow{color:#aa7080}
+.letter-actions .btn{background:#eeb3c9}
+.letter-scene .chapter{background:#fff9f0}
+.letter-lobby .eyebrow{color:#a05279}
+body[data-scene="gifts"] .scene{background:#ffeaf0;background-image:linear-gradient(90deg,#fff4ed77 1px,transparent 1px),linear-gradient(#fff4ed77 1px,transparent 1px);background-size:30px 30px}
+.delivery-road{border-bottom-color:#c28a9b;background:linear-gradient(transparent 94%,#f2cfdd 94%)}
+.delivery-road .pixel-art{animation:delivery-stop 10s linear infinite}
+.gift-card{border:2px solid #c181a0;background:#fff9eb;box-shadow:5px 5px #eab8cd;min-width:240px}
+.gift-card:not(.unwrapped){background:#fff9ed;border-style:dashed}
+.gift-card.unwrapped{animation:gift-pop .65s cubic-bezier(.2,.8,.3,1) both}
+.gift-card .envelope-button:hover canvas{animation:gift-shimmy .5s ease-in-out}
+.gift-card h3{color:#ac4c78}
+.gift-results{gap:30px}
+.final-finish{background:#fff7e9;border:2px dashed #c28aa8;padding:22px 18px;margin-top:30px}
+.ending-scene .scene-bg{filter:saturate(.8);opacity:1}
+.ending-words{border:2px solid #c18bad;background:#fff7eaf2;box-shadow:5px 5px #8c598d44}
+.ending-dedication{background:#fff5eaf5;border-color:#bc89ab;box-shadow:3px 3px #9c739444}
+.sky-star{animation:twinkle 3.5s ease-in-out infinite}
+.bench:before{content:'♡';position:absolute;left:45%;top:-5px;color:#ffe4e9;font-size:26px;animation:companion-heart 4s ease-in-out infinite}
+.shooting-star{position:absolute;top:12%;left:12%;width:5px;height:5px;background:#ffeac9;box-shadow:-6px 0 #ffeac980,-12px 0 #ffeac940;animation:shooting-star 13s linear infinite;pointer-events:none;z-index:-1}
+.shooting-star.second{animation-delay:-7s;top:25%;left:3%}
+.keepsake{border-color:#b66c92;background:#fff9ef;box-shadow:5px 5px #e7bfd1}
+.rocket-scene{background:#fae9f0}
+.flight-mission{background:#fff9e9;border-color:#9b657f}
+.flight-mission>div:first-child strong{color:#608353}
+.flight-mission>div:last-child strong{color:#a64772}
+.flight-hud{background:#f4bed5;border-color:#9b657f;box-shadow:inset 0 2px #ffe0ee}
+.flight-canvas-wrap{border-color:#9b657f;box-shadow:5px 5px #e6b7cc}
+.flight-pickup{background:#fff5d9;border-color:#e4bf83;box-shadow:3px 4px #1a172977;color:#9b4d6b}
+.treat-passport{background:#fff8ec;border-color:#c18ba5;box-shadow:4px 4px #edcad7}
+.treat-checklist .picked{background:#e6edd2;animation:passport-stamp .35s ease}
+.flight-overlay{background:#30243fed}
+.flight-overlay h2{color:#ffd0e4}
+.flight-overlay .btn{background:#efa9c9}
+.flight-overlay .secondary{background:#fff4e5}
+.flight-controls .btn{min-height:48px}
+.flight-time{color:#a36a8b}
+.treat-passport h3{color:#a45178}
+dialog{border-color:#ab698c;background:#fff9ed;box-shadow:7px 8px #8d557555;animation:dialog-arrive .23s ease both}
+dialog::backdrop{background:#4b294b80;backdrop-filter:blur(3px)}
+.dialog-close{border-color:#b47495;background:#f8c8dc;box-shadow:2px 2px #ebadca;min-height:44px;min-width:44px}
+.dialog-content h2{color:#a04d76}
+.toast{border-color:#bc7c9b;background:#fff9e9;box-shadow:4px 5px #dba0bb;color:#925170;border-left:7px solid #d48ba9;font-size:17px}
+.journey-nav{border-color:#b57a99;background:#fff9ee;box-shadow:4px 4px #e7bbce}
+.journey-hint{color:#97627b}
+.bottom-nav{background:#fff6ec88;padding:2px 5px}
+.footer-caption{color:#9e6b84}
+.tap-sparkles{position:fixed;width:0;height:0;z-index:90;pointer-events:none}
+.tap-sparkles i{position:absolute;width:4px;height:4px;box-shadow:0 0 0 1px #fff6e6aa;animation:tap-spark .6s cubic-bezier(.1,.8,.2,1) forwards}
+.particles .confetti{border-radius:0}
+.particles .confetti:nth-child(4n){width:7px;height:7px;box-shadow:3px 0 currentColor,0 3px currentColor}
+.action-reaction{animation:happy-hop .6s ease!important}
+@keyframes chapter-arrive{from{opacity:.2;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+@keyframes heart-beat{0%,70%,100%{transform:scale(1)}78%{transform:scale(1.12)}86%{transform:scale(1)}}
+@keyframes music-beat{0%,100%{transform:scaleY(.6);opacity:.55}50%{transform:scaleY(1.5);opacity:1}}
+@keyframes mote-drift{0%,100%{transform:translate(0,0);opacity:.14}50%{transform:translate(14px,-18px);opacity:.38}}
+@keyframes butterfly-path{0%,100%{transform:translate(0,0) rotate(-8deg)}30%{transform:translate(38px,-23px) rotate(8deg)}65%{transform:translate(-18px,25px) rotate(-6deg)}}
+@keyframes wing-flutter{50%{transform:scaleX(.6)}}
+@keyframes character-idle{0%,100%{transform:translateY(0) rotate(0)}45%{transform:translateY(-4px) rotate(-1deg)}55%{transform:translateY(-4px) rotate(1deg)}}
+@keyframes photo-settle{from{opacity:0;transform:rotate(3deg) translateY(-9px)}to{opacity:1;transform:rotate(-1deg) translateY(0)}}
+@keyframes candle-smoke{to{transform:translate(7px,-20px);opacity:0}}
+@keyframes companion-heart{0%,100%{transform:translateY(4px) scale(.8);opacity:.2}50%{transform:translateY(-7px) scale(1);opacity:.75}}
+@keyframes card-arrive{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@keyframes food-wiggle{25%{transform:rotate(-5deg)}75%{transform:rotate(5deg)}}
+@keyframes cup-pour{0%,100%{transform:translateY(0)}40%{transform:translateY(5px) rotate(-3deg)}70%{transform:translateY(-3px)}}
+@keyframes cup-stir{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+@keyframes serve-cup{0%{transform:translateY(8px) scale(.9)}60%{transform:translateY(-8px) scale(1.05)}100%{transform:translateY(0) scale(1)}}
+@keyframes page-forward{from{opacity:.25;transform:perspective(700px) rotateY(9deg) translateX(10px)}to{opacity:1;transform:perspective(700px) rotateY(0) translateX(0)}}
+@keyframes page-back{from{opacity:.25;transform:perspective(700px) rotateY(-9deg) translateX(-10px)}to{opacity:1;transform:perspective(700px) rotateY(0) translateX(0)}}
+@keyframes envelope-wobble{25%{transform:rotate(-5deg) translateY(-3px)}75%{transform:rotate(4deg) translateY(-3px)}}
+@keyframes gift-pop{0%{opacity:.4;transform:scale(.9) rotate(-3deg)}60%{transform:scale(1.03) rotate(1deg)}100%{opacity:1;transform:scale(1) rotate(0)}}
+@keyframes gift-shimmy{25%{transform:rotate(-6deg)}75%{transform:rotate(6deg)}}
+@keyframes delivery-stop{0%{left:-130px}33%,58%{left:calc(50% - 55px)}100%{left:100%}}
+@keyframes shooting-star{0%,78%,100%{opacity:0;transform:translate(0,0) rotate(25deg)}80%{opacity:1}90%{opacity:0;transform:translate(450px,140px) rotate(25deg)}}
+@keyframes passport-stamp{0%{transform:scale(.94)}65%{transform:scale(1.035)}100%{transform:scale(1)}}
+@keyframes dialog-arrive{from{opacity:.4}to{opacity:1}}
+@keyframes tap-spark{from{transform:translate(0,0);opacity:1}to{transform:translate(var(--dx),var(--dy));opacity:0}}
+@keyframes happy-hop{0%,100%{transform:translateY(0)}40%{transform:translateY(-10px) rotate(-3deg)}70%{transform:translateY(-3px) rotate(2deg)}}
+@media(max-width:800px){.stage-trail{padding-top:8px}
+.gift-card{min-width:210px}
+.scrapbook-photo span{font-size:18px}
+}
+@media(max-width:560px){body{background-size:18px 18px}
+.controls .control{padding:7px 6px;font-size:6px;min-height:40px}
+.brand{font-size:6px;gap:7px;line-height:1.9}
+.topbar{gap:6px}
+.stage-trail{padding-top:7px}
+.trail-node.current{outline-offset:0}
+.trail-caption{letter-spacing:0}
+.adventure{box-shadow:4px 4px #e7b2c6,6px 6px #f8dce6}
+.chapter{font-size:6px;padding:6px 8px;letter-spacing:0}
+.garden-progress{padding:7px 8px;min-width:82px;font-size:7px}
+.garden-companion:before{left:8%;top:18%}
+.garden-companion:after{left:30%;font-size:12px}
+.cafe-awn{height:22px;background-size:auto}
+.cafe-scene .scene-top{margin-top:4px}
+.food-item:hover{transform:none}
+.food-item h3{font-size:8px}
+.food-item p{font-size:15px}
+.scrapbook{padding-top:32px;border-left-width:7px}
+.scrapbook:before{left:6px;width:2px}
+.photo-index-tag{font-size:6px;margin-bottom:23px}
+.scrapbook-photo span{font-size:17px;line-height:1.6}
+.scrapbook-photo:before{width:64px;left:calc(50% - 32px);height:22px}
+.letter-lobby{padding:22px 13px}
+.letter-sheet{padding-top:36px;box-shadow:4px 5px #dcb9bd}
+.letter-sheet:before{right:16px;top:9px;font-size:18px}
+.letter-sheet p{line-height:1.95}
+.gift-card{min-width:0}
+.gift-results{gap:18px}
+.gift-card.unwrapped{animation-duration:.5s}
+.final-finish{padding:18px 12px}
+.scene-trimmings .butterfly{opacity:.45}
+.scene-trimmings .butterfly canvas{width:28px!important;height:28px!important}
+.flight-mission{padding:8px}
+.flight-hud{font-size:8px}
+.toast{font-size:15px;padding:11px 13px}
+.journey-nav-row .btn{font-size:7px}
+.no-dare{padding:9px 10px;font-size:15px}
+.no-dare span{font-size:13px}
+.promise-box>canvas{width:128px!important;height:128px!important}
+.control:active{transform:translateY(1px)!important}
+}
+@media(prefers-reduced-motion:reduce){body{transition:none}
+.scene-trimmings,.tap-sparkles,.shooting-star,.cake-sparkles{display:none}
+.scene,.scrapbook-photo,.gift-card,dialog,.action-reaction,.food-item,.treat-checklist .picked{animation:none!important}
+.brand .logo,.music-led,.safe-girl,.garden-companion:before,.garden-companion:after,.bench:before{animation:none!important}
+}
+.page-resting *, .page-resting *:before, .page-resting *:after{animation-play-state:paused!important}
+.btn.unlock{background:#a04d75;color:#fff8eb;border-color:#8e486a;box-shadow:0 4px #813c60,inset 0 2px #c17598}
+.btn.unlock:hover{background:#b45b85}
 </style></head>
 <body>
 <div class="shell">
@@ -126,7 +411,7 @@ const CONFIG = {
   ]
 };
 </script><script>// Original code-drawn pixel illustrations; no remote image dependencies.
-const PAL={ink:'#643e50',dark:'#86445e',pink:'#f19bb5',light:'#ffd6df',pale:'#fff0e7',rose:'#cf5d86',leaf:'#6c9877',mint:'#a9c3a0',gold:'#ecc278',brown:'#9b684e'};
+const PAL={ink:'#63394f',dark:'#8e4268',pink:'#f3abc7',light:'#ffe1ec',pale:'#fff4e5',rose:'#d96b98',leaf:'#638d72',mint:'#b8cea8',gold:'#eac58c',brown:'#9b684e'};
 const spriteCache={};
 function art(type,size=96,extra='') { return `<canvas class="pixel-art ${extra}" data-art="${type}" width="128" height="128" style="width:${size}px;height:${size}px" aria-hidden="true"></canvas>`; }
 function paintArt(c,type,t=0){
@@ -143,7 +428,14 @@ function paintArt(c,type,t=0){
  };
  const cup=(col=p.mint)=>{r(36,37,56,7,p.ink);r(40,45,48,61,p.ink);r(44,45,40,56,col);r(47,51,4,43,'#ffffff88');r(32,31,64,9,p.pale);r(32,29,64,3,p.ink);r(75,10,5,22,p.rose);r(75,8,20,5,p.rose);heart(55,65,2,'#fff4e9');};
  const bowl=(col=p.rose)=>{r(20,66,88,9,p.ink);r(26,75,76,17,col);r(33,92,62,11,col);r(41,103,46,6,p.ink);r(23,60,82,7,p.gold);r(30,55,64,5,p.brown);r(41,59,8,3,p.pale);r(73,57,9,3,p.pale);};
- if(type==='rocket'){
+ if(type==='butterfly'){
+  r(58,46,10,42,p.ink);r(46,28,8,20,p.ink);r(70,28,8,20,p.ink);
+  r(22,40,34,27,p.rose);r(14,47,16,28,p.rose);r(27,73,28,23,p.pink);
+  r(70,40,34,27,p.rose);r(96,47,15,28,p.rose);r(71,73,28,23,p.pink);
+  r(26,44,23,15,p.light);r(21,60,20,10,p.pink);r(76,44,23,15,p.light);r(87,60,16,10,p.pink);
+  r(34,79,13,7,p.pale);r(79,79,13,7,p.pale);r(60,44,5,6,p.gold);
+ }
+ else if(type==='rocket'){
   r(56,7,16,8,p.pale);r(47,15,34,13,p.pale);r(40,28,48,67,p.rose);r(45,27,38,66,p.pink);r(28,73,13,33,p.rose);r(87,73,13,33,p.rose);r(44,95,41,8,p.ink);r(54,102,21,10,p.pale);r(48,40,31,33,p.ink);r(52,44,23,25,'#e4d4dc');r(55,46,16,8,'#352d39');r(56,53,14,13,'#e5b096');r(58,56,2,3,p.ink);r(65,56,2,3,p.ink);r(59,63,6,1,p.rose);r(57,66,13,4,p.rose);heart(57,79,2,p.pale);
  }
  else if(type==='asteroid'||type==='meteor'){
@@ -210,7 +502,7 @@ function paintArt(c,type,t=0){
  else if(type==='heart'){heart(25,28,11,p.rose);}
  else if(type==='cassette'){r(16,35,96,62,p.ink);r(21,40,86,52,p.pink);r(30,51,66,21,p.pale);r(38,56,12,12,p.ink);r(77,56,12,12,p.ink);r(39,78,49,9,p.dark);}
 }
-function drawAllArt(){document.querySelectorAll('canvas[data-art]').forEach(c=>paintArt(c,c.dataset.art));}
+function drawAllArt(){document.querySelectorAll('canvas[data-art]').forEach(c=>{if(c.dataset.painted)return;paintArt(c,c.dataset.art);c.dataset.painted='1';});}
 function makeBackdrop(kind){
  const c=document.createElement('canvas');c.width=480;c.height=300;const x=c.getContext('2d');
  const r=(a,b,w,h,col)=>{x.fillStyle=col;x.fillRect(a,b,w,h);};
@@ -262,8 +554,8 @@ class RocketEngine{
 }
 class RocketGame{
  constructor(canvas,{onWin=()=>{},onLoss=()=>{},onUpdate=()=>{}}={}){
-  this.canvas=canvas;this.ctx=canvas.getContext('2d');this.onWin=onWin;this.onLoss=onLoss;this.onUpdate=onUpdate;this.keys=new Set();this.disposed=false;this.last=0;this.clockNode=document.getElementById('flight-time');this.positionNode=document.getElementById('flight-position');this.pickupNode=document.getElementById('flight-pickup');this.pickupUntil=0;
-  this.engine=new RocketEngine({onEvent:(kind,detail)=>{if(kind==='collect'){sound('flower');this.showPickup(detail);}if(kind==='damage')sound('wrong');if(kind==='won'){sound('win');celebrate();this.onWin();}if(kind==='lost')this.onLoss();if(kind==='practice-won')sound('win');this.notice=kind==='damage'?(detail==='miss'?'A treat slipped past. It will come around again.':'Bonk! A little shield is keeping you safe.') :kind==='collect'?ROCKET_TREATS[detail][1]+' acquired! ♡':kind==='practice-damage'?'Practice is for learning. Keep going, babie.':'';this.updateHud();this.onUpdate();}});
+  this.canvas=canvas;this.ctx=canvas.getContext('2d');this.onWin=onWin;this.onLoss=onLoss;this.onUpdate=onUpdate;this.keys=new Set();this.disposed=false;this.last=0;this.clockNode=document.getElementById('flight-time');this.positionNode=document.getElementById('flight-position');this.pickupNode=document.getElementById('flight-pickup');this.pickupUntil=0;this.effects=[];
+  this.engine=new RocketEngine({onEvent:(kind,detail)=>{if(kind==='collect'){sound('collect');this.showPickup(detail);}if(kind==='damage')sound('wrong');if(kind==='won'){sound('win');celebrate();this.onWin();}if(kind==='lost')this.onLoss();if(kind==='practice-won')sound('win');this.notice=kind==='damage'?(detail==='miss'?'A treat slipped past. It will come around again.':'Bonk! A little shield is keeping you safe.') :kind==='collect'?ROCKET_TREATS[detail][1]+' acquired! ♡':kind==='practice-damage'?'Practice is for learning. Keep going, babie.':'';this.updateHud();this.onUpdate();}});
   this.down=e=>{if(!['ArrowLeft','ArrowRight','a','d','A','D'].includes(e.key)||e.target.matches('input,select,textarea'))return;if(this.engine.status==='playing'){e.preventDefault();const k=e.key.toLowerCase();if(!e.repeat)this.engine.targetX=Math.max(20,Math.min(340,this.engine.targetX+(['arrowleft','a'].includes(k)?-72:72)));this.keys.add(k);}};
   this.up=e=>this.keys.delete(e.key.toLowerCase());this.blur=()=>{this.keys.clear();this.hold=0;this.engine.pause();};this.visibility=()=>{if(document.hidden)this.blur();};
   document.addEventListener('keydown',this.down);document.addEventListener('keyup',this.up);window.addEventListener('blur',this.blur);document.addEventListener('visibilitychange',this.visibility);
@@ -275,8 +567,8 @@ class RocketGame{
   this.sprites={};[...new Set(ROCKET_TREATS.map(t=>t[0])), 'rocket','asteroid','meteor','evil-carrot','evil-broccoli'].forEach(type=>{const c=document.createElement('canvas');c.width=c.height=128;paintArt(c,type);this.sprites[type]=c;});
   this.loop=t=>{if(this.disposed)return;if(document.hidden){this.last=t;return;}const dt=this.last?Math.min(.06,(t-this.last)/1000):0;this.last=t;const direction=this.hold||(this.keys.has('arrowleft')||this.keys.has('a')?-1:this.keys.has('arrowright')||this.keys.has('d')?1:0);if(direction&&this.engine.status==='playing')this.engine.targetX=Math.max(20,Math.min(340,this.engine.targetX+direction*420*dt));this.engine.step(dt);this.draw(t/1000);};this.timer=setInterval(()=>this.loop(performance.now()),16);this.updateHud();
  }
- start(opts){this.keys.clear();this.hold=0;this.pickupUntil=0;this.pickupNode?.classList.add('hidden');this.engine.start(opts);}
- showPickup(id){if(!this.pickupNode)return;this.pickupUntil=this.engine.elapsed+1.6;this.pickupNode.textContent=ROCKET_TREATS[id][1]+' acquired! ♡';this.pickupNode.classList.remove('hidden');this.pickupNode.style.animation='none';void this.pickupNode.offsetWidth;this.pickupNode.style.animation='';}
+ start(opts){this.keys.clear();this.hold=0;this.pickupUntil=0;this.effects=[];this.pickupNode?.classList.add('hidden');this.engine.start(opts);}
+ showPickup(id){if(typeof matchMedia!=='function'||!matchMedia('(prefers-reduced-motion: reduce)').matches)this.effects.push({x:this.engine.x,y:this.engine.y-12,at:this.engine.elapsed});if(!this.pickupNode)return;this.pickupUntil=this.engine.elapsed+1.6;this.pickupNode.textContent=ROCKET_TREATS[id][1]+' acquired! ♡';this.pickupNode.classList.remove('hidden');this.pickupNode.style.animation='none';void this.pickupNode.offsetWidth;this.pickupNode.style.animation='';}
  updateHud(){const e=this.engine;const lives=document.getElementById('flight-lives'),count=document.getElementById('flight-count');if(!lives)return;lives.textContent='♥'.repeat(e.lives)+'♡'.repeat(3-e.lives);lives.setAttribute('aria-label',e.lives+' lives remaining');count.textContent=e.collected.size+'/'+(e.practice?3:14)+(e.practice?' practice':' treats');document.querySelectorAll('[data-treat]').forEach(n=>{const yes=e.collected.has(Number(n.dataset.treat));n.classList.toggle('picked',yes);n.querySelector('.treat-check').textContent=yes?'✓':'○';});const status=document.getElementById('flight-notice');if(status)status.textContent=this.notice||'Drag your rocket, or use the arrow controls.';}
  draw(t){const x=this.ctx,e=this.engine;x.imageSmoothingEnabled=false;x.fillStyle='#302d50';x.fillRect(0,0,360,380);
   for(let i=0;i<42;i++){const y=(i*53+(e.elapsed*15))%380,a=(i*97+12)%360;x.fillStyle=i%3?'#e0c0d8':'#ffe8c3';x.fillRect(a,y,i%4?1:2,2);}
@@ -284,6 +576,7 @@ class RocketGame{
   for(const o of e.objects){const type=o.kind==='treat'?ROCKET_TREATS[o.id][0]:['asteroid','evil-carrot','evil-broccoli','meteor'][o.id];if(o.kind==='treat'){x.strokeStyle='#eac779';x.strokeRect(o.x-21,o.y-23,42,43);}x.drawImage(this.sprites[type],o.x-23,o.y-25,46,46);}
   if(e.shield>0){x.strokeStyle=Math.sin(t*13)>0?'#b5e7d2':'#fbe2f0';x.lineWidth=2;x.strokeRect(e.x-25,e.y-30,50,60);}
   x.fillStyle=t%0.2<.1?'#ffd192':'#e7a4be';x.fillRect(e.x-6,e.y+23,12,12+(Math.floor(t*8)%2)*5);x.drawImage(this.sprites.rocket,e.x-30,e.y-34,60,68);
+  this.effects=this.effects.filter(p=>e.elapsed-p.at<.65);for(const p of this.effects){const age=e.elapsed-p.at;for(let i=0;i<8;i++){const angle=i*Math.PI/4;x.fillStyle=['#ffd7e9','#e9cf8c','#b9d6b1'][i%3];const size=age<.35?3:2;x.fillRect(p.x+Math.cos(angle)*age*75,p.y+Math.sin(angle)*age*58-age*18,size,size);}}
   if(e.status==='countdown'){x.fillStyle='#302d50b0';x.fillRect(0,0,360,380);x.textAlign='center';x.font='35px Pixel,monospace';x.fillStyle='#ffe4db';x.fillText(Math.ceil(e.countdown),180,195);}
   if(this.pickupNode&&e.elapsed>this.pickupUntil)this.pickupNode.classList.add('hidden');const clock=this.clockNode;if(clock){const sec=Math.floor(e.elapsed);if(clock.dataset.sec!==String(sec)){clock.dataset.sec=sec;clock.textContent='FLIGHT '+String(Math.floor(sec/60)).padStart(2,'0')+':'+String(sec%60).padStart(2,'0');}}const hud=this.positionNode;if(hud){const lane=Math.max(1,Math.min(5,Math.round((e.x-36)/72)+1));if(hud.dataset.lane!==String(lane)){hud.dataset.lane=lane;hud.textContent='Rocket lane '+lane+' of 5';}}
  }
@@ -305,12 +598,20 @@ const state={scene:hasResume?'welcome':'safe',unlocked:!!saved.unlocked,promise:
 let unlockTimer=null;
 function save(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify({schema:2,unlocked:state.unlocked,promise:state.promise,done:state.done,flowers:[...state.flowers],hearts:[...state.hearts],candles:[...state.candles],sfx:state.sfx,music:state.music,matcha:state.matcha,albumPage:state.albumPage,albumSeen:state.albumSeen,losses:state.losses,giftParts:[...state.giftParts],mediaDone:state.mediaDone,lastScene:state.lastScene}))}catch(e){}}
 let audioContext;
+const recentSounds=new Map();let rustleBuffer;
 function enableSfx(){try{audioContext ||= new(window.AudioContext||window.webkitAudioContext)();if(audioContext.state==='suspended')audioContext.resume().catch(()=>{});}catch(e){}}
 function sound(kind='click'){
  if(!state.sfx||!audioContext||audioContext.state!=='running')return;
- const notes={click:[660],key:[440],flower:[660,880],open:[392,523,659],win:[523,659,784,1046],wrong:[245,196],paper:[880,690],pop:[880,1100]}[kind]||[660];
- notes.forEach((f,i)=>{const o=audioContext.createOscillator(),g=audioContext.createGain();o.type=kind==='paper'?'triangle':'square';o.frequency.setValueAtTime(f,audioContext.currentTime+i*.075);g.gain.setValueAtTime(0,audioContext.currentTime+i*.075);g.gain.linearRampToValueAtTime(.018,audioContext.currentTime+i*.075+.008);g.gain.exponentialRampToValueAtTime(.0001,audioContext.currentTime+i*.075+.09);o.connect(g);g.connect(audioContext.destination);o.start(audioContext.currentTime+i*.075);o.stop(audioContext.currentTime+i*.075+.11);});
+ const now=audioContext.currentTime;if(now-(recentSounds.get(kind)??-1)<.045)return;recentSounds.set(kind,now);
+ const bank={click:[[784],.045,.012,'triangle'],key:[[523],.035,.011,'square'],flower:[[523,659,784],.14,.016,'sine'],open:[[392,523,659],.14,.016,'triangle'],win:[[523,659,784,1046],.19,.017,'triangle'],wrong:[[220,196],.1,.013,'sine'],paper:[[700],.04,.004,'triangle'],pop:[[740,988],.07,.014,'sine'],step:[[440,659],.065,.01,'triangle'],pour:[[392,523],.1,.01,'sine'],stir:[[659,587,659],.055,.009,'triangle'],serve:[[659,784,1046],.14,.014,'sine'],ribbon:[[523,784,988],.14,.015,'sine'],unwrap:[[392,659,784],.16,.015,'triangle'],collect:[[784,988,1175],.09,.013,'sine'],launch:[[196,294,392,587],.1,.011,'triangle'],pause:[[523,392],.07,.009,'sine']}[kind]||[[660],.06,.01,'triangle'];
+ const [notes,duration,volume,type]=bank,gap=['click','key','paper'].includes(kind)?.03:.065;
+ notes.forEach((f,i)=>{const o=audioContext.createOscillator(),g=audioContext.createGain(),at=now+i*gap;o.type=type;o.frequency.setValueAtTime(f,at);if(['pop','collect','pour'].includes(kind))o.frequency.exponentialRampToValueAtTime(f*1.12,at+duration);g.gain.setValueAtTime(.0001,at);g.gain.linearRampToValueAtTime(volume,at+.006);g.gain.exponentialRampToValueAtTime(.0001,at+duration);o.connect(g);g.connect(audioContext.destination);o.start(at);o.stop(at+duration+.015);});
+ if(['paper','unwrap','pour','stir','launch'].includes(kind)){
+  if(!rustleBuffer){rustleBuffer=audioContext.createBuffer(1,Math.floor(audioContext.sampleRate*.24),audioContext.sampleRate);const data=rustleBuffer.getChannelData(0);for(let i=0;i<data.length;i++)data[i]=(Math.random()*2-1)*.65;}
+  const src=audioContext.createBufferSource(),filter=audioContext.createBiquadFilter(),gain=audioContext.createGain();src.buffer=rustleBuffer;filter.type='lowpass';filter.frequency.setValueAtTime(kind==='paper'?2400:kind==='launch'?900:600,now);filter.frequency.exponentialRampToValueAtTime(160,now+.2);gain.gain.setValueAtTime(.0001,now);gain.gain.linearRampToValueAtTime(kind==='paper'?.018:.012,now+.012);gain.gain.exponentialRampToValueAtTime(.0001,now+.22);src.connect(filter);filter.connect(gain);gain.connect(audioContext.destination);src.start(now);src.stop(now+.24);
+ }
 }
+function actionCue(a){return ({key:'key',next:'step',back:'step',stage:'step',continue:'open','album-page':'paper',photo:'paper',miss:'paper',relight:'pop','tie-ribbon':'ribbon','flight-start':'launch','flight-practice':'launch','flight-gentle':'launch','flight-resume':'step','flight-pause':'pause',date:'paper',keepsake:'paper','cafe-tab':'pop'})[a]||'click';}
 class Music{
  constructor(){this.main=$('#main-audio');this.letter=$('#letter-audio');this.main.autoplay=state.music;this.main.src=asset(CONFIG.mainAudio);this.letter.src=asset(CONFIG.letterAudio);this.main.loop=this.letter.loop=true;this.kind='main';this.started=false;this.generation=0;this.blocked=false;this.base=.38;[this.main,this.letter].forEach(a=>{a.volume=this.base;['play','pause','error'].forEach(e=>a.addEventListener(e,()=>this.ui()))});}
  get active(){return this.kind==='letter'?this.letter:this.main;}
@@ -345,7 +646,7 @@ function render(){
 }
 function go(where){if(!views[where])return;if(where!=='safe'&&where!=='promise'&&!state.unlocked)return;const was=state.scene;state.scene=where;if(was==='letter'&&where!=='letter')music.change('main');if(where==='letter'&&was!=='letter')music.change('letter');render();if(was==='cinema'&&where!=='cinema'&&state.music&&music.started)music.startActive();window.scrollTo({top:0,behavior:'instant'});const title=$('h1');if(title){title.tabIndex=-1;title.focus({preventScroll:true});}}
 function toast(msg){$('.toast')?.remove();const n=document.createElement('div');n.className='toast';n.setAttribute('role','status');n.textContent=msg;document.body.append(n);setTimeout(()=>n.remove(),3800);}
-function celebrate(){if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;const n=document.createElement('div');n.className='particles';n.setAttribute('aria-hidden','true');n.innerHTML=Array.from({length:38},(_,i)=>`<i class="confetti" style="left:${(i*31)%100}%;top:-25px;background:${['#e297ae','#f0c36b','#a5ba8e','#fff0da'][i%4]};animation-delay:${i%7*.06}s;animation-duration:${1.6+i%5*.16}s"></i>`).join('');document.body.append(n);setTimeout(()=>n.remove(),3000);}
+function celebrate(){if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;$('.particles')?.remove();const n=document.createElement('div');n.className='particles';n.setAttribute('aria-hidden','true');n.innerHTML=Array.from({length:26},(_,i)=>`<i class="confetti" style="left:${(i*31)%100}%;top:-25px;color:${['#e5a1bd','#eac68e','#adc59b','#fff2da'][i%4]};background:currentColor;animation-delay:${i%7*.06}s;animation-duration:${1.9+i%5*.2}s"></i>`).join('');document.body.append(n);setTimeout(()=>n.remove(),3400);}
 const modal=$('#modal');let afterModal=null;
 function openModal(title,html,callback=null){if(modal.open)modal.close();$('#modal-title').textContent=title;$('#modal-body').innerHTML=html;afterModal=callback;modal.showModal();drawAllArt();}
 modal.addEventListener('close',()=>{if(afterModal){const cb=afterModal;afterModal=null;cb();}});
@@ -378,7 +679,7 @@ function keepsakeModal(){openModal('A little birthday keepsake',`<div class="kee
 function downloadCard(){const c=document.createElement('canvas');c.width=1000;c.height=1250;const x=c.getContext('2d');x.fillStyle='#fff3e8';x.fillRect(0,0,1000,1250);x.strokeStyle='#b26585';x.lineWidth=7;x.strokeRect(35,35,930,1180);x.lineWidth=2;x.strokeRect(52,52,896,1146);const p=document.createElement('canvas');p.width=p.height=128;paintArt(p,'bouquet');x.imageSmoothingEnabled=false;x.drawImage(p,340,75,320,320);x.textAlign='center';x.fillStyle='#aa4f72';x.font='19px Pixel,monospace';x.fillText('OCTOBER 31, 2026',500,445);x.fillStyle='#643e50';x.font='34px Pixel,monospace';['Happy 20th','birthday,','Hanikka.'].forEach((t,i)=>x.fillText(t,500,540+i*75));x.font='29px Georgia,serif';['Here’s to your dreams,','your little joys,','and everything ahead of you.'].forEach((t,i)=>x.fillText(t,500,850+i*45));x.font='italic 38px Georgia,serif';x.fillText('Love, Carlo ♡',500,1080);const a=document.createElement('a');a.download='Hanikka-20th-Birthday.png';a.href=c.toDataURL('image/png');a.click();toast('Your little birthday card is ready to save. ♡');}
 document.addEventListener('click',e=>{
  const b=e.target.closest('button,[data-go]');if(!b||b.disabled)return;if(state.sfx)enableSfx();const a=b.dataset.action;if(b.dataset.go){sound(b.dataset.go==='letter'?'paper':'click');go(b.dataset.go);return;}if(!a)return;
- if(a!=='begin')sound(a==='key'?'key':'click');
+ if(a!=='begin')sound(actionCue(a));
  switch(a){
  case 'begin':music.begin();sound('open');b.textContent='♡ You’re right on time';toast('Your little world is ready. Let’s open the safe.');break;
  case 'music':music.toggle();break;
@@ -506,7 +807,7 @@ function readFlower(id){if(!Number.isInteger(id)||id<0||id>=20)return;const fres
 document.addEventListener('click',e=>{
  const b=e.target.closest('button');if(!b||b.disabled)return;const a=b.dataset.action;
  if(a==='promise-next'){state.promise=true;save();return;}
- const handled=['stage','continue','next','back','relight','tie-ribbon','all-flowers','collect-all','flower','read-flower-next','flower-finish','matcha-step','album-page','album-finish','finish-letter','unwrap','gift','reset','confirm-reset','replay-stage','do-replay','media-retry','media-ack','flight-start','flight-practice','flight-gentle','flight-pause','flight-resume','flight-restart'];if(!handled.includes(a))return;e.stopImmediatePropagation();enableSfx();sound('click');
+ const handled=['stage','continue','next','back','relight','tie-ribbon','all-flowers','collect-all','flower','read-flower-next','flower-finish','matcha-step','album-page','album-finish','finish-letter','unwrap','gift','reset','confirm-reset','replay-stage','do-replay','media-retry','media-ack','flight-start','flight-practice','flight-gentle','flight-pause','flight-resume','flight-restart'];if(!handled.includes(a))return;e.stopImmediatePropagation();enableSfx();if(!['flower','read-flower-next','all-flowers','unwrap','matcha-step'].includes(a))sound(actionCue(a));
  switch(a){
  case 'stage':go(b.dataset.stage==='letter'?'letters':b.dataset.stage);break;
  case 'continue':if(state.music&&!music.started)music.begin();go(continueTarget());break;
@@ -517,12 +818,12 @@ document.addEventListener('click',e=>{
  case 'collect-all':toast('Each little flower has something for you. Read them at your own pace.');break;
  case 'flower':case 'read-flower-next':readFlower(Number(b.dataset.id));break;
  case 'flower-finish':modal.close();$('.ribbon-finish')?.scrollIntoView({block:'center',behavior:'smooth'});break;
- case 'matcha-step':state.matcha=Math.min(4,state.matcha+1);save();matchaModal();if(state.matcha===4)markDone('cafe');break;
- case 'album-page':state.albumPage=Math.max(0,Math.min(albumTotal()-1,state.albumPage+Number(b.dataset.dir)));state.albumSeen=Math.max(state.albumSeen,state.albumPage);save();render();$('.scrapbook')?.scrollIntoView({block:'start',behavior:'instant'});break;
+ case 'matcha-step':sound(['pour','pour','stir','serve'][state.matcha]||'serve');state.matcha=Math.min(4,state.matcha+1);save();matchaModal();if(state.matcha===4)markDone('cafe');break;
+ case 'album-page':state.albumTurn=Number(b.dataset.dir);state.albumPage=Math.max(0,Math.min(albumTotal()-1,state.albumPage+state.albumTurn));state.albumSeen=Math.max(state.albumSeen,state.albumPage);save();render();$('.scrapbook')?.scrollIntoView({block:'start',behavior:'instant'});break;
  case 'album-finish':if(state.albumPage===albumTotal()-1&&state.albumSeen===albumTotal()-1){markDone('album');render();}break;
  case 'finish-letter':markDone('letter');go('gifts');break;
  case 'gift':break;
- case 'unwrap':state.giftParts.add(b.dataset.gift);save();sound('open');if(finalRequirements())markDone('gifts');render();break;
+ case 'unwrap':state.giftParts.add(b.dataset.gift);save();sound('unwrap');if(finalRequirements())markDone('gifts');render();break;
  case 'media-retry':{const slot=b.closest('.recording-slot');slot.querySelector('.media-recovery').classList.add('hidden');slot.querySelector('.personal-media').load();break;}
  case 'media-ack':{const m=b.closest('.recording-slot').querySelector('.personal-media');if(!m.error)return;finishMedia(m);break;}
  case 'reset':openModal('Start a new birthday adventure?',`<p>This resets every stage, the candles, flowers, album, rocket attempts, gifts, and secret hearts on this device. Your music and sound choices stay as you set them.</p><div class="row"><button class="btn secondary" data-action="close-modal">Keep my adventure</button><button class="btn" data-action="confirm-reset">Start a new adventure</button></div>`);break;
@@ -544,68 +845,39 @@ if(state.done.gifts&&!finalRequirements()){state.done.gifts=false;save();}
 render();
 
 function fitFlight(){$('.flight-board')?.scrollIntoView({block:'start',behavior:'instant'});}
-</script><script>/* A visual companion: points to controls without clicking or revealing answers. */
+</script><script>/* Lightweight scene details. Decorations never change adventure checkpoints. */
 (() => {
- const guide=document.createElement('div');guide.className='pixel-guide hidden';guide.setAttribute('aria-hidden','true');
- guide.innerHTML='<span class="guide-copy"></span><svg class="guide-hand" viewBox="0 0 24 28" shape-rendering="crispEdges" aria-hidden="true"><path fill="#643e50" d="M9 0h6v10h3v2h3v3h3v9h-3v4H6v-4H3v-6H0v-6h6v3h3z"/><path fill="#fff4e8" d="M11 2h2v13h3v-3h2v3h3v8h-2v3H8v-4H5v-5H2v-3h3v3h6z"/><path fill="#f19bb5" d="M8 22h11v3H8z"/></svg>';
- document.body.append(guide);
- const visited=new Set();let queued=false,lastTarget=null;
- const find=(selector,root=document)=>root.querySelector(selector);
- const action=a=>`[data-action="${a}"]`;
- function target(){
-  if(modal.open){
-   const next=find(action('read-flower-next'),modal)||find(action('flower-finish'),modal);if(next)return [next,next.dataset.action==='flower-finish'?'Your bouquet is ready ♡':'Read the next little flower ♡'];
-   const matcha=find(action('matcha-step'),modal);if(matcha)return [matcha,['Add the matcha ♡','A little Oatside next ♡','Give it a stir ♡','Ready to serve, babie ♡'][state.matcha]];
-   const promise=find(action('promise-next'),modal);if(promise)return [promise,'Your birthday wish is next ♡'];
-   const submit=find('#date-form button[type="submit"]',modal);if(submit)return [submit,'Make your little date ticket ♡'];
-   return [find('.dialog-close',modal),'Close whenever you’re ready ♡'];
+ const beforeRender=render,beforeModal=openModal;
+ function trimScene(){
+  const s=$('#app .scene');if(!s)return;
+  document.body.classList.toggle('body-turn-left',state.albumTurn===-1);document.body.classList.toggle('body-turn-right',state.albumTurn===1);
+  if(!s.querySelector('.scene-trimmings')&&!['letter','rocket'].includes(state.scene)){
+   const layer=document.createElement('div');layer.className='scene-trimmings';layer.setAttribute('aria-hidden','true');
+   layer.innerHTML=Array.from({length:6},(_,i)=>`<i class="pixel-mote" style="left:${4+(i*29)%92}%;top:${5+(i*31)%86}%;animation-delay:-${i*1.6}s"></i>`).join('');
+   if(['garden','map','safe','welcome'].includes(state.scene))layer.innerHTML+=`<span class="butterfly" style="left:5%;top:17%">${art('butterfly',34)}</span><span class="butterfly" style="right:7%;top:65%">${art('butterfly',29)}</span>`;
+   s.prepend(layer);
   }
-  const next=()=>[find('#stage-navigation '+action('next')),'The next chapter is ready ♡'];
-  if(['garden','cafe','album','gifts'].includes(state.scene)){const heart=find('#app .tiny-heart:not(.found)');if(heart)return [heart,'A secret little heart—tap it ♡'];}
-  switch(state.scene){
-   case 'welcome':return [find(action('continue')),'Pick up your little adventure ♡'];
-   case 'safe':return find('#password')?.value.replace(/\D/g,'').length>=6?[find(action('unlock')),'Try opening your surprise ♡']:[find('#password'),'Input the password, babie ♡'];
-   case 'promise':return [find(state.no?'#yes':'#no'),state.no?'Birthday girl privileges? Yes, please ♡':'Try “No”… if you dare ♡'];
-   case 'cake':return state.candles.size<20?[find(action('blow')),'Make a wish, then blow ♡']:next();
-   case 'garden':{const id=CONFIG.reasons.findIndex((_,i)=>!state.flowers.has(i));return id>=0?[find('.garden-companion '+action('all-flowers')),'Read the next little flower ♡']:!state.done.garden?[find(action('tie-ribbon')),'Tie your birthday bouquet ♡']:next();}
-   case 'cafe':
-    if(!state.done.cafe)return [find(action('matcha')),'Let’s make babie’s matcha ♡'];
-    if(!visited.has('oil'))return [find(action('oil'))||find('[data-action="cafe-tab"][data-id="feast"]'),'A little chicken oil, too? ♡'];
-    if(!visited.has('drinks'))return [find('[data-action="cafe-tab"][data-id="drinks"]'),'Your favorite drinks live here ♡'];
-    if(!visited.has('snack-chest'))return state.cafe==='snacks'?[find(action('snack-chest')),'A little snack treasure ♡']:[find('[data-action="cafe-tab"][data-id="snacks"]'),'Let’s peek at the snacks ♡'];
-    if(!visited.has('date'))return [find(action('date')),'Build a birthday date wish list ♡'];
-    return next();
-   case 'album':return state.albumPage===albumTotal()-1?[find(action('album-finish')),'All the little memories, with love ♡']:[find('[data-action="album-page"][data-dir="1"]'),'Take your time, then turn the page ♡'];
-   case 'rocket':if(!flight||['playing','countdown'].includes(flight.engine.status))return null;return [find(action(flight.engine.status==='paused'?'flight-resume':flight.engine.status==='won'?'next':'flight-start')),flight.engine.status==='paused'?'Ready when you are, pilot ♡':flight.engine.status==='won'?'You did it! Your letter is ready ♡':'Your snack rescue starts here ♡'];
-   case 'letters':if(!visited.has('miss'))return [find(action('miss')),'A smaller envelope, just for you ♡'];return [find('.letter-lobby .btn[data-go="letter"]'),'Your birthday letter is waiting ♡'];
-   case 'letter':return [find(action('finish-letter')),'Only when you’ve finished, babie ♡'];
-   case 'gifts':return !state.giftParts.has('cake')?[find('.btn[data-action="unwrap"][data-gift="cake"]'),'Your first little present ♡']:!state.giftParts.has('bouquet')?[find('.btn[data-action="unwrap"][data-gift="bouquet"]'),'One more little surprise ♡']:state.done.gifts?[find('.final-finish .btn'),'Meet me under the stars ♡']:[find('.personal-media'),'A little recording, just for you ♡'];
-   case 'ending':return [find(action('keepsake')),'A little birthday keepsake ♡'];
-   case 'map':{const key=currentKey();return [find('[data-action="stage"][data-stage="'+key+'"]')||find('#stage-navigation '+action('next')),'Your next little stop ♡'];}
+  if(state.scene==='cake'){
+   const cake=$('.cake-stage');if(cake&&!cake.querySelector('.cake-sparkles')){const glints=document.createElement('span');glints.className='cake-sparkles';glints.setAttribute('aria-hidden','true');glints.innerHTML=Array.from({length:5},(_,i)=>`<i style="left:${i*23}%;top:${12+(i%3)*25}%;animation-delay:-${i*.7}s">✧</i>`).join('');cake.append(glints);}
   }
+  if(state.scene==='album'&&!$('.photo-index-tag')){const tag=document.createElement('span');tag.className='photo-index-tag';tag.textContent=state.albumPage<CONFIG.photos.length?'PHOTO '+String(state.albumPage+1).padStart(2,'0')+' / '+CONFIG.photos.length:'LITTLE MEMORY '+(state.albumPage-CONFIG.photos.length+1)+' / '+CONFIG.memories.length;$('.scrapbook')?.prepend(tag);}
+  if(state.scene==='ending'&&!$('.shooting-star')){for(let i=0;i<2;i++){const star=document.createElement('i');star.className='shooting-star'+(i?' second':'');star.setAttribute('aria-hidden','true');s.append(star);}}
+  drawAllArt();
  }
- function update(){queued=false;if(state.scene==='safe')visited.clear();guide.classList.toggle('game-guide',state.scene==='rocket'&&!modal.open);const result=target();if(!result?.[0]){guide.classList.add('hidden');return;}const [el,copy]=result,r=el.getBoundingClientRect();
-  const parent=modal.open?modal:document.body;if(guide.parentElement!==parent)parent.append(guide);
-  const topLimit=modal.open?16:(find('#stage-trail')?.getBoundingClientRect().bottom||0)+5;
-  // Never jump past her reading or place the guide on an offscreen control.
-  if(r.width===0){guide.classList.add('hidden');return;}
-  const offscreen=r.bottom<topLimit||r.top>innerHeight-20;guide.classList.toggle('scroll-guide',offscreen&&!modal.open);
-  if(offscreen){if(modal.open){guide.classList.add('hidden');return;}guide.classList.remove('hidden','below');guide.style.top=(innerHeight-104)+'px';guide.querySelector('.guide-copy').textContent=state.scene==='letter'?'Take your time reading ♡ Continue at the end.':r.bottom<topLimit?'Your next little step is above ♡':'Scroll down for your next little step ♡';return;}
-  guide.classList.remove('hidden');guide.querySelector('.guide-copy').textContent=copy;
-  const width=Math.min(232,innerWidth-24);guide.style.width=width+'px';
-  const left=Math.max(12,Math.min(innerWidth-width-12,r.left+r.width/2-width/2));
-  const below=modal.open?r.bottom+90<innerHeight:r.top-78<topLimit;guide.classList.toggle('below',below);
-  guide.style.left=left+'px';guide.style.top=(below?Math.min(innerHeight-guide.offsetHeight-10,r.bottom+7):r.top-guide.offsetHeight-7)+'px';
-  guide.style.setProperty('--hand-x',Math.max(8,Math.min(width-32,r.left+r.width/2-left-12))+'px');
-  if(lastTarget&&lastTarget!==el)lastTarget.classList.remove('guide-target');el.classList.add('guide-target');lastTarget=el;
+ render=function(){beforeRender();trimScene();};
+ openModal=function(title,html,callback=null){beforeModal(title,html,callback);const station=$('.matcha-station');if(station)station.dataset.phase=String(state.matcha);};
+ let lastBurst=0;
+ function tapSparkles(e){
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches||state.scene==='letter')return;
+  const b=e.target.closest('button');if(!b||b.disabled||b.getAttribute('aria-disabled')==='true'||b.dataset.flight||b.dataset.action==='key')return;
+  const now=performance.now();if(now-lastBurst<140)return;lastBurst=now;
+  const r=b.getBoundingClientRect(),cloud=document.createElement('div');cloud.className='tap-sparkles';cloud.setAttribute('aria-hidden','true');cloud.style.left=(e.clientX||r.left+r.width/2)+'px';cloud.style.top=(e.clientY||r.top+r.height/2)+'px';
+  cloud.innerHTML=Array.from({length:7},(_,i)=>{const angle=i*Math.PI*2/7;return `<i style="--dx:${Math.round(Math.cos(angle)*(20+i%3*8))}px;--dy:${Math.round(Math.sin(angle)*26-12)}px;background:${['#e8a2bf','#edd09a','#a9c295'][i%3]}"></i>`;}).join('');
+  (modal.open?modal:document.body).append(cloud);setTimeout(()=>cloud.remove(),650);
  }
- function schedule(){if(queued)return;queued=true;setTimeout(update,35);}
- const observer=new MutationObserver(schedule);['#app','#modal-body','#stage-navigation','#flight-overlay'].forEach(s=>{const el=find(s);if(el)observer.observe(el,{childList:true,subtree:true});});
- // Observe dialog visibility; keep the companion in the dialog's top layer.
- observer.observe(modal,{attributes:true,attributeFilter:['open']});
- document.addEventListener('click',e=>{const b=e.target.closest('button');if(b){if(b.dataset.action)visited.add(b.dataset.action);if(b.dataset.action==='cafe-tab')visited.add(b.dataset.id);}schedule();},true);
- document.addEventListener('input',schedule);document.addEventListener('scroll',schedule,true);window.addEventListener('resize',schedule);modal.addEventListener('close',schedule);
- update();
+ document.addEventListener('pointerdown',tapSparkles,true);
+ document.addEventListener('visibilitychange',()=>document.body.classList.toggle('page-resting',document.hidden));
+ trimScene();
 })();
 </script>
 </body></html>
